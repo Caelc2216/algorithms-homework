@@ -41,15 +41,17 @@ def bubble_sort(l):
    if swaped == True:
       bubble_sort(l)
 
-def selection_sort(l, index_to_start = 0):
+def selection_sort(l):
+   index_to_start = 0
    if len(l) != 0:
-      smallest_num_index = index_to_start
-      for i in range(index_to_start, len(l)):
-         if l[i] < l[smallest_num_index]:
-            smallest_num_index = i
-      l[smallest_num_index], l[index_to_start] = l[index_to_start], l[smallest_num_index]
-      if index_to_start!=len(l)-1:
-         selection_sort(l, index_to_start = index_to_start + 1)
+      for j in range(index_to_start, len(l)):
+         smallest_num_index = index_to_start
+         for i in range(index_to_start, len(l)):
+            if l[i] < l[smallest_num_index]:
+               smallest_num_index = i
+         l[smallest_num_index], l[index_to_start] = l[index_to_start], l[smallest_num_index]
+         if index_to_start!=len(l)-1:
+            index_to_start = index_to_start + 1
 
 def insertion_sort(l):
    sorted = []
@@ -64,10 +66,68 @@ def insertion_sort(l):
                index = index-1
 
 def merge_sort_rec(l):
-   return l
+   if len(l) == 0:
+      return []
+   if len(l) == 1:
+      return l
+   elif len(l) == 2:
+      if l[0] > l[1]:
+         l[0], l[1] = l[1], l[0]
+      return l
+   else:
+      split = len(l)//2
+      firsthalf = []
+      secondhalf = []
+      for i in range(len(l)):
+         if i <= split - 1:
+            firsthalf.append(l[i])
+         else: 
+            secondhalf.append(l[i])
+      sorted1 = merge_sort_rec(firsthalf)
+      sorted2 = merge_sort_rec(secondhalf)
+      sorted1_index = 0
+      sorted2_index = 0
+      l.clear()
+      for i in range(len(sorted1)+len(sorted2)):
+         if sorted2_index < len(sorted2) and sorted1_index < len(sorted1):
+            if sorted1[sorted1_index] <= sorted2[sorted2_index]:
+               l.append(sorted1[sorted1_index])
+               sorted1_index = sorted1_index + 1
+            else:
+               l.append(sorted2[sorted2_index])
+               sorted2_index = sorted2_index + 1
+         elif len(sorted1) <= sorted1_index:
+            l.append(sorted2[sorted2_index])
+            sorted2_index = sorted2_index + 1
+         elif len(sorted2) <= sorted2_index:
+            l.append(sorted1[sorted1_index])
+            sorted1_index = sorted1_index + 1
+      return l
+
 
 def quick_sort_rec(l):
-   return l
+   if len(l) == 0:
+      return []
+   pivot = l[len(l)//2]
+   if len(l) <= 1:
+      return l
+   else:
+      left = []
+      right = []
+      for i in range(0, len(l)):
+         if i != len(l)//2:
+            if l[i] <= pivot:
+               left.append(l[i])
+            else:
+               right.append(l[i])
+      l.clear()
+      after_left = (quick_sort_rec(left))
+      l.extend(after_left)
+      l.append(pivot)
+      after_right = (quick_sort_rec(right))
+      l.extend(after_right)
+      return l
+      
 
 def counting_sort(l):
    return l
@@ -93,7 +153,7 @@ def test_all(original):
       sort(a)
       assert a == sorted(original), f"failed to sort {original} with {sort.__name__}."
 
-def time_sort(original, prep, sort):
+def time_sort(original, prep, sort, timeout):
    a = prep(list(original))
    start = time.perf_counter()
    sort(a)
@@ -108,7 +168,7 @@ def aggregated_time_sort(lists, length, prep, sort, repetitions, timeout):
 
 import pandas as pd
 
-sorts = [bubble_sort, selection_sort, insertion_sort]
+sorts = [bubble_sort, selection_sort, insertion_sort, merge_sort_rec, quick_sort_rec]
 if __name__ == '__main__':
    random.seed(4567)
    preps = [sorted, reverse_sorted, unchanged]

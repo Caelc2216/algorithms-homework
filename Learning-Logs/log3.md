@@ -1,0 +1,17 @@
+- Question/Problem: What is the big O of counting sort?
+- When Identified: 8/31/26 8:20 pm
+- Importance: 
+- How to Learn: 
+- Insight/Answer:
+- Hours Spent Learning: 
+- Minutes Spent Documenting: 
+- Confidence:
+
+- Question/Problem: What is the concept of counting sort?
+- When Identified: 8/31/26 8:20 pm
+- Importance: 
+- How to Learn: 
+- Insight/Answer:
+- Hours Spent Learning: 
+- Minutes Spent Documenting: 
+- Confidence:
