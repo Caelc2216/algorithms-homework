@@ -1,17 +1,53 @@
 - Question/Problem: What is the big O of counting sort?
 - When Identified: 8/31/26 8:20 pm
-- Importance: 
-- How to Learn: 
-- Insight/Answer:
-- Hours Spent Learning: 
-- Minutes Spent Documenting: 
-- Confidence:
+- Importance: 3
+- How to Learn: Look it up
+- Insight/Answer: It has a time complexity of O(n + k) and a space complexity of O(n + k). This is because you have to itterate through the whole array giving you the n and you have to track each constant giving you the k
+- Hours Spent Learning: 10 min
+- Minutes Spent Documenting: 3 min
+- Confidence: 4
 
 - Question/Problem: What is the concept of counting sort?
 - When Identified: 8/31/26 8:20 pm
-- Importance: 
-- How to Learn: 
-- Insight/Answer:
-- Hours Spent Learning: 
-- Minutes Spent Documenting: 
-- Confidence:
+- Importance: 4
+- How to Learn: Look it up, watch a video
+- Insight/Answer: You create a new array with the indexes of 0...max value of array and assign each index a count of how many times that number appears, then you reassign the previous array with those values starting with the smallest.
+- Hours Spent Learning: 10 min
+- Minutes Spent Documenting: 3 min
+- Confidence: 4
+
+- Question/Problem: How do I get quicksort to edit the same list in place?
+- When Identified: 9/2/26 5:00 pm
+- Importance: 3
+- How to Learn: Play around with the code, look up some ideas
+- Insight/Answer: I ended up using optional parameters in the function indicating where we want to start and end in the recursive functions
+- Hours Spent Learning: 1 hr
+- Minutes Spent Documenting: 3 min
+- Confidence: 3
+
+- Question/Problem: How do you find Big Omega?
+- When Identified: 9/2/26 8:27 pm
+- Importance: 4
+- How to Learn: Look at the resources in the module, look it up, watch a video 
+- Insight/Answer: Big Omega is often associated with the best-case scenario, it measures the minimum number of operations or time. 
+- Hours Spent Learning: 10 min 
+- Minutes Spent Documenting: 2 min
+- Confidence: 2
+
+- Question/Problem: How do you find Big Theta?
+- When Identified: 9/2/26 8:27 pm
+- Importance: 4
+- How to Learn: Look at the resources in the module, look it up, watch a video
+- Insight/Answer: I don't really understand how to find it but the idea is it has two limit functions that show that the runtime is always between those two limits
+- Hours Spent Learning: 7 min
+- Minutes Spent Documenting: 4 min
+- Confidence: 3
+
+- Question/Problem: How do you find little o?
+- When Identified: 9/2/26 8:27 pm
+- Importance: 4
+- How to Learn: Look at the resources in the module, look it up, watch a video
+- Insight/Answer: little o is the upper bound of the algorithms runtime, it can be found by taking the limit of Bid O time complexity/runtime divided by a function g(n) that has a higher degree or growth rate 
+- Hours Spent Learning: 5 min
+- Minutes Spent Documenting: 4 min
+- Confidence: 3
