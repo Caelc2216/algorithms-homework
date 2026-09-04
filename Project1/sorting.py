@@ -127,6 +127,47 @@ def quick_sort_rec(l):
       after_right = (quick_sort_rec(right))
       l.extend(after_right)
       return l
+
+def quick_sort_rec_in_line(l, start=0, end=None):
+   if end == None:
+      end = len(l)-1
+   if len(l) == 0 | end-start+1 == 0:
+      return []
+   pivot_index = (end-start)//2 + start
+   pivot = l[pivot_index]
+   if end-start+1 == 2:
+      if l[start] > l[end]:
+         l[start], l[end] = l[end], l[start]
+         return l
+      else:
+         return l
+   if end-start+1 <= 1:
+      return l
+   else:
+      start_of_big_index = - 1
+      for i in range(start, end + 1):
+         if i != pivot_index:
+            if l[i] > pivot and start_of_big_index == -1:
+               start_of_big_index = i
+            elif start_of_big_index != -1 and l[i] < pivot:
+               l[start_of_big_index], l[i] = l[i], l[start_of_big_index]
+               start_of_big_index += 1
+      if pivot_index == start_of_big_index: # Pivot is already in place
+         quick_sort_rec_in_line(l, start=start, end=start_of_big_index-1)
+         quick_sort_rec_in_line(l, start=start_of_big_index + 1, end=end)
+      elif pivot_index < start_of_big_index:
+         l[pivot_index], l[start_of_big_index-1] = l[start_of_big_index-1], l[pivot_index]
+         quick_sort_rec_in_line(l, start=start, end=start_of_big_index-1)
+         quick_sort_rec_in_line(l, start=start_of_big_index, end=end)
+      elif start_of_big_index == - 1: # Pivot is the largest
+         l[pivot_index], l[end] = l[end], l[pivot_index]
+         quick_sort_rec_in_line(l, start=start, end=end-1)
+      else:
+         l[pivot_index], l[start_of_big_index] = l[start_of_big_index], l[pivot_index]
+         if start_of_big_index-1 >= start:
+            quick_sort_rec_in_line(l, start=start, end=start_of_big_index-1)
+         quick_sort_rec_in_line(l, start=start_of_big_index+1, end=end)
+
       
 
 def counting_sort(l):
@@ -168,7 +209,7 @@ def aggregated_time_sort(lists, length, prep, sort, repetitions, timeout):
 
 import pandas as pd
 
-sorts = [bubble_sort, selection_sort, insertion_sort, merge_sort_rec, quick_sort_rec]
+sorts = [bubble_sort, selection_sort, insertion_sort, merge_sort_rec, quick_sort_rec, quick_sort_rec_in_line]
 if __name__ == '__main__':
    random.seed(4567)
    preps = [sorted, reverse_sorted, unchanged]
