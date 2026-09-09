@@ -1,16 +1,14 @@
-Code for quiz 'big1'
+- Question/Problem: How does insertion work in a min heap?
+- When Identified: 9/9/26 10:47 am
+- Importance: 4
+- How to Learn: Ask in class 
+- Insight/Answer: You add to the bottom of the tree and then compare with the parent node and swap if needed
+- Hours Spent Learning: 4 min 
+- Minutes Spent Documenting: 2 min
+- Confidence: 4
 
-- Question/Problem:  
-- When Identified: 
-- Importance: 
-- How to Learn: 
-- Insight/Answer:
-- Hours Spent Learning: 
-- Minutes Spent Documenting: 
-- Confidence:
-
-- Question/Problem: 
-- When Identified: 
+- Question/Problem: Why don't you use the 0 index in a min heap?
+- When Identified: 9/9/26
 - Importance: 
 - How to Learn: 
 - Insight/Answer:
