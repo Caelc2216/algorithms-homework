@@ -133,7 +133,7 @@ def quick_sort_rec_in_line(l, start=0, end=None):
       end = len(l)-1
    if len(l) == 0 | end-start+1 == 0:
       return []
-   pivot_index = (end-start)//2 + start
+   pivot_index = random.randint(start, end)
    pivot = l[pivot_index]
    if end-start+1 == 2:
       if l[start] > l[end]:
@@ -171,7 +171,24 @@ def quick_sort_rec_in_line(l, start=0, end=None):
       
 
 def counting_sort(l):
-   return l
+   if len(l) == 0:
+      return l
+   min_value = l[0]
+   max_value = l[0]
+   for i in range(len(l)):
+      if min_value > l[i]:
+         min_value = l[i]
+      if max_value < l[i]:
+         max_value = l[i]
+   range_of_array = max_value - min_value
+   count_array = [0] * (range_of_array + 1)
+   for i in range(len(l)):
+      count_array[l[i]-min_value] += 1
+   l.clear()
+   for i in range(len(count_array)):
+      if count_array[i] != 0:
+         for j in range(count_array[i]):
+            l.append(i + min_value)
 
 
 
@@ -209,7 +226,7 @@ def aggregated_time_sort(lists, length, prep, sort, repetitions, timeout):
 
 import pandas as pd
 
-sorts = [bubble_sort, selection_sort, insertion_sort, merge_sort_rec, quick_sort_rec, quick_sort_rec_in_line]
+sorts = [bubble_sort, selection_sort, insertion_sort, merge_sort_rec, quick_sort_rec, quick_sort_rec_in_line, counting_sort]
 if __name__ == '__main__':
    random.seed(4567)
    preps = [sorted, reverse_sorted, unchanged]
