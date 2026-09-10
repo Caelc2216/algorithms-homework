@@ -7,47 +7,29 @@
 - Minutes Spent Documenting: 2 min
 - Confidence: 4
 
-- Question/Problem: Why don't you use the 0 index in a min heap?
-- When Identified: 9/9/26
-- Importance: 
-- How to Learn: 
-- Insight/Answer:
-- Hours Spent Learning: 
-- Minutes Spent Documenting: 
-- Confidence:
+- Question/Problem: What other algorithms use the divide and conquer method?
+- When Identified: 9/9/26 9: 32 pm
+- Importance: 2
+- How to Learn: Look it up, do some research 
+- Insight/Answer: Some algorithms that use the divide and conquer strategy include binary search, Strassen's Matrix Multiplication, Karatsuba Algorithm, and Closest Pair of Points
+- Hours Spent Learning: 5 min
+- Minutes Spent Documenting: 3 min
+- Confidence: 2
 
-- Question/Problem: 
-- When Identified: 
-- Importance: 
-- How to Learn: 
-- Insight/Answer:
-- Hours Spent Learning: 
-- Minutes Spent Documenting: 
-- Confidence:
+- Question/Problem: What is the Karatsuba Algorithm?
+- When Identified:  9/9/26 9:43 pm
+- Importance: 4
+- How to Learn: Look it up, watch a video animation explaining the algorithm 
+- Insight/Answer: Unlike standard multiplication it splits the numbers in half and does a different operation on them, Karatsuba figured out how to reuse 2 computations that already need to happen so that instead of 4 different computations that still resulted in O(n^2) you only have to do 3 computations which results in O(n^1.5)
+- Hours Spent Learning: 20 min
+- Minutes Spent Documenting: 4 min
+- Confidence: 3
 
-- Question/Problem: 
-- When Identified: 
-- Importance: 
-- How to Learn: 
-- Insight/Answer:
-- Hours Spent Learning: 
-- Minutes Spent Documenting: 
-- Confidence:
-
-- Question/Problem: 
-- When Identified: 
-- Importance: 
-- How to Learn: 
-- Insight/Answer:
-- Hours Spent Learning: 
-- Minutes Spent Documenting: 
-- Confidence:
-
-- Question/Problem: 
-- When Identified: 
-- Importance: 
-- How to Learn: 
-- Insight/Answer:
-- Hours Spent Learning: 
-- Minutes Spent Documenting: 
-- Confidence:
+- Question/Problem: What programing languages still use Karatsuba algorithm? What do the others use?
+- When Identified: 9/9/26 10:04 pm
+- Importance: 2
+- How to Learn: Do some research 
+- Insight/Answer: Python, Java, C and C++ all use Karatsuba algorithm. Other systems like python have a hybrid where they use Standard multiplication for small numbers, Toom-Cook Algorithm for large numbers, and Fast Fourier Transform for astronomical numbers
+- Hours Spent Learning: 4 min
+- Minutes Spent Documenting: 2 min
+- Confidence: 2
