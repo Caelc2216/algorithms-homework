@@ -1,0 +1,53 @@
+- Question/Problem: What is a recursion tree?
+- When Identified: 9/14/26 7:57 pm
+- Importance: 3
+- How to Learn: Look it up 
+- Insight/Answer: A recursion tree is just a visualization of how a recursive function works. The root node is the start of the function call, each layer deeper is the next recursive call, at the bottom are your base cases
+- Hours Spent Learning: 4 min 
+- Minutes Spent Documenting:  3 min
+- Confidence: 4
+
+- Question/Problem: How do I draw a recursion tree?
+- When Identified: 9/14/26 7:58 pm
+- Importance: 3
+- How to Learn: Watch a video 
+- Insight/Answer: I get the basic structure and how they correlate to the master equations we were talking about in class, but I am confused if you write recursion trees using specific cases or generically
+- Hours Spent Learning: 5 min
+- Minutes Spent Documenting: 3 min
+- Confidence: 3
+
+- Question/Problem: For this project should I write the recursion trees using a specific example or generically?
+- When Identified: 9/14/26 8:37 pm
+- Importance: 3
+- How to Learn: Look up what is common, ask AI 
+- Insight/Answer: it looks like the common concensus is that recursion trees should be written generically and not simulating a specific case, although I think a specific case might help me determine the generic form
+- Hours Spent Learning: 5 min
+- Minutes Spent Documenting: 2 min
+- Confidence: 4
+
+- Question/Problem:  Does grade school multiply need/have a recursion tree? It isn't a recursive function is it?
+- When Identified: 9/14/26 8:55 pm
+- Importance: 3
+- How to Learn: Look it up, ask in class 
+- Insight/Answer: Grade school multiplication doesn't use recursion. Although it doesn't use recursion you can still write and model a master equation for it
+- Hours Spent Learning: 4 min
+- Minutes Spent Documenting: 3 min
+- Confidence: 2
+
+- Question/Problem: What do I put in the nodes if the recursion depends on 2 different inputs?
+- When Identified: 9/14/26 9:10 pm
+- Importance: 3
+- How to Learn: look it up 
+- Insight/Answer: Yes you would put both inputs sizes into the node
+- Hours Spent Learning: 2 min
+- Minutes Spent Documenting: 2 min
+- Confidence: 3
+
+- Question/Problem: 
+- When Identified: 
+- Importance: 
+- How to Learn: 
+- Insight/Answer:
+- Hours Spent Learning: 
+- Minutes Spent Documenting: 
+- Confidence:
