@@ -1,0 +1,53 @@
+- Question/Problem: How do you set infinity in Python?
+- When Identified: 10/5/26 4:45 pm
+- Importance: 1
+- How to Learn: look it up 
+- Insight/Answer: you use float('inf')
+- Hours Spent Learning: 2 min
+- Minutes Spent Documenting: 2 min
+- Confidence: 5
+
+- Question/Problem: What is the recursive step in optimal binary search?
+- When Identified: 10/5/26 5:10 pm
+- Importance: 3
+- How to Learn: Write it out by hand, look at the past project
+- Insight/Answer: I think I should recurse on the left and right sides of a tree, by doing all permutations of a possible root node
+- Hours Spent Learning: 8 min
+- Minutes Spent Documenting: 4 min
+- Confidence: 3
+
+- Question/Problem: How do I determine the move cost in relation of the root node? 
+- When Identified: 10/5/26 5:10 pm
+- Importance: 3
+- How to Learn: Write out the test cases by hand 
+- Insight/Answer: The root node can be found by the index, similarly the amount of move steps can be found from root node - current index if on the left and current index - root index if on the right
+- Hours Spent Learning: 10 min
+- Minutes Spent Documenting: 4 min
+- Confidence: 3
+
+- Question/Problem: How do I know how many rotations the robot has to make? 
+- When Identified: 10/5/26 5:47 pm
+- Importance: 3
+- How to Learn: Write out more test cases by hand 
+- Insight/Answer: I think that if the index is not 0 since the robot always has to travel to the root node first, there needs to be at least 2 swaps for every other node. 1 for turning to move to the root node and one to turn back to go to index 0 regardless if on the left or right of the root node
+- Hours Spent Learning: 7 min
+- Minutes Spent Documenting: 3 min
+- Confidence: 2
+
+- Question/Problem: 
+- When Identified: 
+- Importance: 
+- How to Learn: 
+- Insight/Answer:
+- Hours Spent Learning: 
+- Minutes Spent Documenting: 
+- Confidence:
+
+- Question/Problem: 
+- When Identified: 
+- Importance: 
+- How to Learn: 
+- Insight/Answer:
+- Hours Spent Learning: 
+- Minutes Spent Documenting: 
+- Confidence:

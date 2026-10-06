@@ -1,0 +1,53 @@
+- Question/Problem: what is Cycle rank? 
+- When Identified: 9/30/26 7:45 pm
+- Importance: 3
+- How to Learn: read the Wiki page, watch a video, ask AI 
+- Insight/Answer: I couldn't find a video and the wiki page didn't make much sense to me, however AI says that it is a measure of how deeply the cycles in a directed graph are nested.
+- Hours Spent Learning: 10 min
+- Minutes Spent Documenting: 3 min
+- Confidence: 1
+
+- Question/Problem: What is the Longest path problem?
+- When Identified: 9/30/26 8:49 pm
+- Importance: 3
+- How to Learn: Look at the wiki page, try and find a video 
+- Insight/Answer: It is where you try to find the longest path in a graph where you can't have any repeated verticies, the length of the path is determined by the number of edges or the sum of the weights
+- Hours Spent Learning: 5 min
+- Minutes Spent Documenting: 3 min
+- Confidence: 3
+
+- Question/Problem: What is the Hamiltonian Path?
+- When Identified: 9/30/26 8:57 pm
+- Importance: 3
+- How to Learn: read the wiki page, watch a video, ask ai 
+- Insight/Answer: it determines if a graph contains a hamiltonian path, which means that the path visitis every vertex in the graph exactly once
+- Hours Spent Learning: 3 min
+- Minutes Spent Documenting: 3 min
+- Confidence: 3
+
+- Question/Problem: What reduction would be best for the Hamiltonian Path Problem?
+- When Identified: 9/30/26 9:02 pm
+- Importance: 3
+- How to Learn: Ask AI 
+- Insight/Answer: going from 3SAT to the Hamiltonian Path is a textbook approach, and can be found in multiple places
+- Hours Spent Learning: 2 min
+- Minutes Spent Documenting: 3 min
+- Confidence: 3
+
+- Question/Problem: 
+- When Identified: 
+- Importance: 
+- How to Learn: 
+- Insight/Answer:
+- Hours Spent Learning: 
+- Minutes Spent Documenting: 
+- Confidence:
+
+- Question/Problem: 
+- When Identified: 
+- Importance: 
+- How to Learn: 
+- Insight/Answer:
+- Hours Spent Learning: 
+- Minutes Spent Documenting: 
+- Confidence:
