@@ -1,45 +1,130 @@
+# Cael Church
+# 10/9/26
 
+# I worked on this project alone as I thought in class it was said that working in a group was optional
 
-
+from functools import cache
 
 
 
 # Part 1
-# 1. Opt_Cost(frewuencies, cost_per_rotation, move_cost_per_distance, cost_per_scan) would return the optimal cost given the params
-# 2. computing the optimal cost of the left and right sides of a tree given a root node. The parameters would be starting node, and ending node.
-# 3. The top level function will keep the min cost of each recursive call and return the min_cost
-# 4. 
+# 1. Opt_Cost(frequencies, cost_per_rotation, move_cost_per_distance, cost_per_scan) would return the minimal cost that is found by trying all possible root combinations and weighting the move, rotation, and scan costs.
+# 2. computing the optimal cost of the left and right sides of a tree given a root node. The parameters would be starting node, ending node, the parent node/where we are coming from, and what direction we are facing. we need these additional parameters since every time the robot moves it comes from the previous root node, and there is a rotation cost associated with switching directions
+# 3. The top level function starts at index 0 and with the robot facing left, it gives us our original starting point where the rest of the code is based off of, it also provides the costs and frequencies of each node. 
+# 4a. The base case is when the starting node is the same as the ending node.
+# 4b. It should return 0 because we are excluding end in our loop. End is beyond the length of our frequencies, meaning there would be no calls to end because it doesn't exist
+# 5a. The solution of the nested function will compute the cost for a given span by combining the cost of the root node with its subsequent branches
+# 5b. It will consider what moves, scans, and rotations it needs to take as a root node. Since every scan needs to go to the root node first this needs to be efficient as the cost will be multiplied by every node in the given span
+# 5c. It will recurse on the left and right branches passing in itself as the parent node and which direction the robot is facing so that it can find the efficient node for its span
+# 5d. It will compare the smallest cost candidate with each candidate solution and keep the one with the smallest cost 
 
 
 # Part 2
 def optimal_cost_backtracking(frequencies, cost_per_rotation, move_cost_per_distance, cost_per_scan):
-    cheapest = float('inf')
 
-    def branch_cost(start, end):
+    def branch_cost(start, end, moving_from, facing_right):
+        cheapest = float('inf')
         sum = 0
         if start==end:
             return 0
         else:
+            for node in range(start, end):
+                sum += frequencies[node]
             for i in range(start, end):
-                # for root
-                cost_to_move = i * move_cost_per_distance * 2
-                if i != 0:
-                    cost_to_rotate = cost_per_rotation * 2
-                else: 0
-                sum += (cost_to_move + cost_to_rotate + cost_per_scan) * frequencies[i] 
-            
-        for j in range(len(end-start)):
-            left = branch_cost[0, j-1]
-            right = branch_cost(j+1, len(end-start)-1)
-        return None
+                newDirection = facing_right
+                return_cost = 0
 
-# if root_index == 0:
-#     cost_to_move_and_scan_root = cost_per_scan
-# else:
-#     cost_to_move_and_scan_root = root_index * move_cost_per_distance +  cost_per_scan
-# distance_from_root = absolute_value|root_index - current_index|
-# add cost_per_rotation
-    
+                # needs to switch direction
+                if (facing_right and i < moving_from) or (not facing_right and i > moving_from):
+                    newDirection = not facing_right
+                    cost = ((abs(i-moving_from) * move_cost_per_distance) + cost_per_scan + (cost_per_rotation)) * sum
+                else:
+                    cost = (abs(i-moving_from) * move_cost_per_distance + cost_per_scan) * sum
+
+                # needs to switch direction to go back
+                if newDirection:
+                    return_cost = ((i * move_cost_per_distance) + cost_per_rotation) * frequencies[i]
+                else:
+                    return_cost = (i * move_cost_per_distance * frequencies[i])
+                cost = cost + return_cost
+                left = branch_cost(start, i, i, newDirection)
+                right = branch_cost(i+1, end, i, newDirection)
+                cheapest = min(cost + left + right, cheapest)
+        return cheapest
+    return branch_cost(0, len(frequencies), 0, False)
+
+
+# Part 3
+def optimal_cost_memoized(frequencies, cost_per_rotation, move_cost_per_distance, cost_per_scan):
+
+    @cache
+    def branch_cost(start, end, moving_from, facing_right):
+        cheapest = float('inf')
+        sum = 0
+        if start==end:
+            return 0
+        else:
+            for node in range(start, end):
+                sum += frequencies[node]
+            for i in range(start, end):
+                newDirection = facing_right
+                return_cost = 0
+
+                # needs to switch direction
+                if (facing_right and i < moving_from) or (not facing_right and i > moving_from):
+                    newDirection = not facing_right
+                    cost = ((abs(i-moving_from) * move_cost_per_distance) + cost_per_scan + (cost_per_rotation)) * sum
+                else:
+                    cost = (abs(i-moving_from) * move_cost_per_distance + cost_per_scan) * sum
+
+                # needs to switch direction to go back
+                if newDirection:
+                    return_cost = ((i * move_cost_per_distance) + cost_per_rotation) * frequencies[i]
+                else:
+                    return_cost = (i * move_cost_per_distance * frequencies[i])
+                cost = cost + return_cost
+                left = branch_cost(start, i, i, newDirection)
+                right = branch_cost(i+1, end, i, newDirection)
+                cheapest = min(cost + left + right, cheapest)
+        return cheapest
+    return branch_cost(0, len(frequencies), 0, False)
+
+
+# Part 4
+def optimal_tree(frequencies, cost_per_rotation, move_cost_per_distance, cost_per_scan):
+
+    @cache
+    def branch_cost(start, end, moving_from, facing_right):
+        cheapest = float('inf'), ()
+        sum = 0
+        if start==end:
+            return 0, ()
+        else:
+            for node in range(start, end):
+                sum += frequencies[node]
+            for i in range(start, end):
+                newDirection = facing_right
+                return_cost = 0
+
+                # needs to switch direction
+                if (facing_right and i < moving_from) or (not facing_right and i > moving_from):
+                    newDirection = not facing_right
+                    cost = ((abs(i-moving_from) * move_cost_per_distance) + cost_per_scan + (cost_per_rotation)) * sum
+                else:
+                    cost = (abs(i-moving_from) * move_cost_per_distance + cost_per_scan) * sum
+
+                # needs to switch direction to go back
+                if newDirection:
+                    return_cost = ((i * move_cost_per_distance) + cost_per_rotation) * frequencies[i]
+                else:
+                    return_cost = (i * move_cost_per_distance * frequencies[i])
+                cost = cost + return_cost
+                left = branch_cost(start, i, i, newDirection)
+                right = branch_cost(i+1, end, i, newDirection)
+                if (cost + left[0] + right[0]) < cheapest[0]:
+                    cheapest = (cost + left[0] + right[0]), (i, left[1], right[1])
+        return cheapest
+    return branch_cost(0, len(frequencies), 0, False)
 
 
 
