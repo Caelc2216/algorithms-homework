@@ -1,38 +1,38 @@
-- Question/Problem: 
-- When Identified: 
-- Importance: 
-- How to Learn: 
-- Insight/Answer:
-- Hours Spent Learning: 
-- Minutes Spent Documenting: 
-- Confidence:
+- Question/Problem: What is the backtracking method?
+- When Identified: 9/21/26 4:43 pm
+- Importance: 3
+- How to Learn: Look it up, do some research, reference the textbook 
+- Insight/Answer: it is deciding one thing, then doing that recursively until you get the solution or you are wrong, if you are wrong you backtrack and make a different decision. One example would be Depth-First-Search
+- Hours Spent Learning: 5 min
+- Minutes Spent Documenting: 3 min
+- Confidence: 3
 
-- Question/Problem: 
-- When Identified: 
-- Importance: 
-- How to Learn: 
-- Insight/Answer:
-- Hours Spent Learning: 
-- Minutes Spent Documenting: 
-- Confidence:
+- Question/Problem: Can there be more than one answer to a backtracking algorithm because it depends on the criteria you use to make the decision?
+- When Identified: 9/21/26 5:23 pm
+- Importance: 3
+- How to Learn: Ask AI, get some examples 
+- Insight/Answer: yes you can have more than one answer depending on the criteria as well as depending on what it is that you want to solve. If you are just wanting to improve the worst case there could be multiple different solutions.
+- Hours Spent Learning: 5 min
+- Minutes Spent Documenting: 4 min
+- Confidence: 2
 
-- Question/Problem: 
-- When Identified: 
-- Importance: 
-- How to Learn: 
-- Insight/Answer:
-- Hours Spent Learning: 
-- Minutes Spent Documenting: 
-- Confidence:
+- Question/Problem: Is the optimal root always the middle index of the range, like in a balanced BST?
+- When Identified: 9/21/26 5:26 pm
+- Importance: 3 
+- How to Learn: Look in the book, look it up, ask AI
+- Insight/Answer: Not necessarily it can depend on other factors to such as weights or frequently searched for. You want to cater to what is searched more frequently as that will minimize the average case
+- Hours Spent Learning: 3 min
+- Minutes Spent Documenting: 2 min
+- Confidence: 3
 
-- Question/Problem: 
-- When Identified: 
-- Importance: 
-- How to Learn: 
-- Insight/Answer:
-- Hours Spent Learning: 
-- Minutes Spent Documenting: 
-- Confidence:
+- Question/Problem: How does a BST allow for prunning?
+- When Identified: 9/21/26 5:35 pm
+- Importance: 3
+- How to Learn: Watch a video, ask AI 
+- Insight/Answer: because a BST is set up with all things less than the parent on the left and all things larger than the parent on the right, when you compare to the parent node you can choose a path and safely discard the other path
+- Hours Spent Learning: 3 min
+- Minutes Spent Documenting: 4 min
+- Confidence: 4
 
 - Question/Problem: 
 - When Identified: 
