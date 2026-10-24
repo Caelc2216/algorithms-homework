@@ -1,0 +1,53 @@
+- Question/Problem: What is a Huffman Tree
+- When Identified: 10/12 9:13 am
+- Importance: 3
+- How to Learn: Watch a video 
+- Insight/Answer: A Huffman Tree is when you sort a list of items and then you create the tree backwards starting at the leaves and picking the two least combined weights
+- Hours Spent Learning: 7 min
+- Minutes Spent Documenting: 3 min
+- Confidence: 3
+
+- Question/Problem: 
+- When Identified: 
+- Importance: 
+- How to Learn: 
+- Insight/Answer:
+- Hours Spent Learning: 
+- Minutes Spent Documenting: 
+- Confidence:
+
+- Question/Problem: 
+- When Identified: 
+- Importance: 
+- How to Learn: 
+- Insight/Answer:
+- Hours Spent Learning: 
+- Minutes Spent Documenting: 
+- Confidence:
+
+- Question/Problem: 
+- When Identified: 
+- Importance: 
+- How to Learn: 
+- Insight/Answer:
+- Hours Spent Learning: 
+- Minutes Spent Documenting: 
+- Confidence:
+
+- Question/Problem: 
+- When Identified: 
+- Importance: 
+- How to Learn: 
+- Insight/Answer:
+- Hours Spent Learning: 
+- Minutes Spent Documenting: 
+- Confidence:
+
+- Question/Problem: 
+- When Identified: 
+- Importance: 
+- How to Learn: 
+- Insight/Answer:
+- Hours Spent Learning: 
+- Minutes Spent Documenting: 
+- Confidence:

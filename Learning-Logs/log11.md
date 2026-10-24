@@ -1,0 +1,53 @@
+- Question/Problem: What is topological order?
+- When Identified: 10/23/26 10:30 am
+- Importance: 3
+- How to Learn: Look it up, look in the book, try some examples of finding it with AI 
+- Insight/Answer: Topological order is when all of the nodes only have forward pointing arrows instead of backward pointing arrows. it only exists for DAGS. You can find it by doing reversal post order traversal
+- Hours Spent Learning: 5 min
+- Minutes Spent Documenting: 5 min
+- Confidence: 4
+
+- Question/Problem: In what case can you be sure which node comes first in any topological order?
+- When Identified: 10/23/26 11:13 am
+- Importance: 3
+- How to Learn: Ask AI 
+- Insight/Answer: if there is only one node in degree 0, meaning it can have no nodes pointing to it. It means that it has to be first and since it is the only node in degree 0 it is first in all variations of the topological order
+- Hours Spent Learning: 4 min
+- Minutes Spent Documenting: 3 min
+- Confidence: 3
+
+- Question/Problem: What is Kosaraju's algorithm?
+- When Identified: 10/23/26 10:05 pm
+- Importance: 3
+- How to Learn: Ask AI, watch a video of it being implemented 
+- Insight/Answer: Kosaraju's algorith finds all of the strongly connected components of a directed graph. It is run by doing the DFS on the graph in reverse post order. than reversing the edges and running DFS on the reverse picking nodes in the reverse postorder from the original DFS. 
+- Hours Spent Learning: 6 min
+- Minutes Spent Documenting: 5 min 
+- Confidence: 2
+
+- Question/Problem: What is a strongly connected component?
+- When Identified: 10/23/26 10:06 pm
+- Importance: 3
+- How to Learn: look in the reading, look it up 
+- Insight/Answer: A strongly connected component exists in a directed graph if u -> v and v -> u. SCC's can also be more than 2 nodes such as a->b, b->c, c->a this makes {a, b, c} a SCC
+- Hours Spent Learning: 3 min
+- Minutes Spent Documenting: 3 min
+- Confidence: 3
+
+- Question/Problem: Can a SCC only exist in graphs that have cycles?
+- When Identified: 10/23/26 10:15 pm
+- Importance: 2
+- How to Learn: Try it out, ask AI for validation 
+- Insight/Answer: each node is an SCC with itself, but to have SCC's with more than one node you have to have cycles
+- Hours Spent Learning: 4 min
+- Minutes Spent Documenting: 3 min
+- Confidence: 4
+
+- Question/Problem: 
+- When Identified: 
+- Importance: 
+- How to Learn: 
+- Insight/Answer:
+- Hours Spent Learning: 
+- Minutes Spent Documenting: 
+- Confidence:
